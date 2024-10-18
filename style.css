@@ -1,0 +1,226 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Space Mono;
+    font-weight: 700;
+
+}
+
+:root {
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Light-grayish-cyan);
+
+}
+
+.container {
+    width: 375px;
+    height: auto;
+    background-color: white;
+    padding: 40px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.input input {
+    background-color: var(--Very-light-grayish-cyan);
+    border: none;
+    outline: none;
+    padding: 10px;
+    text-align: end;
+    font-size: 24px;
+    border-radius: 5px;
+    color: var(--Very-dark-cyan);
+    cursor: text;
+}
+
+#price.selected {
+    border: 2px solid var(--Strong-cyan);
+}
+
+.icons {
+    position: absolute;
+    padding: 20px;
+}
+
+label {
+    color: var(--Grayish-cyan);
+}
+
+.tip-area {
+    padding-top: 30px;
+}
+
+.tip-area p {
+    color: var(--Grayish-cyan);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+.logo{
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.tip {
+    padding: 10px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 7px;
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+    cursor: pointer;
+}
+
+.tip:hover {
+    background-color: var(--Light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.tip.clicked {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+#customTip {
+    width: 140px;
+    text-align: center;
+    background-color: var(--Very-light-grayish-cyan);
+    color: var(--Dark-grayish-cyan);
+    cursor: text;
+    outline: none;
+}
+
+#customTip.selected {
+    border: 2px solid var(--Strong-cyan);
+}
+
+#noOfPeaple.selected {
+    border: 2px solid var(--Strong-cyan);
+}
+
+#noOfPeaple.errorborder {
+    border: 2px solid red;
+}
+
+.Amount-area {
+    background-color: var(--Very-dark-cyan);
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.Amounts {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.Amounts p {
+    color: var(--White);
+}
+
+.Amounts span {
+    color: var(--Dark-grayish-cyan);
+    font-size: smaller;
+
+}
+
+.error {
+    position: relative;
+    width: 320px;
+    display: flex;
+}
+
+#errortxt {
+    position: absolute;
+    right: 0%;
+    font-size: small;
+    color: darkred;
+}
+
+#resetbtn {
+    padding: 10px;
+    width: 250px;
+    background-color: var(--Strong-cyan);
+    border: none;
+    border-radius: 5px;
+    color: var(--Very-dark-cyan);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#resetbtn:hover {
+    background-color: var(--Very-light-grayish-cyan);
+}
+
+#tip-amount {
+    font-size: 34px;
+    color: var(--Strong-cyan);
+}
+
+#total-amount {
+    font-size: 34px;
+    color: var(--Strong-cyan);
+}
+
+
+@media (min-width:1000px) {
+    .container {
+        width: 916px;
+        display: flex;
+        border-radius: 20px;
+        height: 480px;
+    }
+
+    .Amount-area {
+        width: 409px;
+        margin-left: 100px;
+        position: relative;
+        margin-top: 0%;
+    }
+
+    .buttons {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #customTip {
+        width: 100px;
+    }
+
+    #resetbtn {
+        position: absolute;
+        bottom: 10%;
+        width: 350px;
+        font-size: 1.5rem;
+    }
+
+    .input input {
+        width: 350px;
+    }
+
+    .error {
+        width: 350px;
+
+    }
+
+}
